@@ -7,9 +7,9 @@ public class Main {
         countOne.start();
         countTwo.start();
 
-//        Counter counterOne = new Counter();
-//        Counter counterTwo = new Counter();
-//        counterOne.start();
-//        counterTwo.start();
+        Counter counterOne = new Counter();
+        Counter counterTwo = new Counter();
+        counterOne.start();
+        counterTwo.start();
     }
 }
