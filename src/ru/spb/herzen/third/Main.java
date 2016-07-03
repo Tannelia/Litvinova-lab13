@@ -16,7 +16,7 @@ public class Main {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println(accountOne.getName() + " have " + accountOne.getMoney() + "rubles");
-        System.out.println(accountTwo.getName() + " have " + accountTwo.getMoney() + "rubles");
+        System.out.println(accountOne.getName() + " have " + accountOne.getMoney() + " rubles");
+        System.out.println(accountTwo.getName() + " have " + accountTwo.getMoney() + " rubles");
     }
 }

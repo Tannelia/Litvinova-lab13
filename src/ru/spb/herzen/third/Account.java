@@ -23,11 +23,11 @@ class Account extends Thread {
     }
 
     public int sendMoney(int money) {
-        this.money += money;
+        this.money -= money;
         return this.money;
     }
     public int takeMoney(int money) {
-        this.money -= money;
+        this.money += money;
         return this.money;
     }
 
@@ -36,10 +36,10 @@ class Account extends Thread {
         Random random = new Random();
         int check = receiver.getStartMoney() + this.getStartMoney();
         for (int i = 0; i< 1000; i++) {
-            int amount = random.nextInt(money);
+            int amount = random.nextInt(this.money);
 
-            int sender = this.takeMoney(amount);
-            int getter = receiver.sendMoney(amount);
+            int sender = this.sendMoney(amount);
+            int getter = receiver.takeMoney(amount);
 
             if (sender + getter != check) {
                 System.out.println("RaceCondition");
